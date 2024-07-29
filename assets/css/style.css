@@ -169,87 +169,54 @@ img:hover {
 }
 
 
-/*Resolucion Baja
-@media ((width >= 0px) and (width < 992px)) {
-  * {
-    margin: 0;
-    padding: 0;
-    font-size: 62, 5%;
-    box-sizing: border-box;
-  }
-  nav {
-    width: 25%;
-  }
+/* Estilos para dispositivos de escritorio */
+@media (min-width: 992px) {
+   .container {
+       max-width: 1200px;
+       margin: 0 auto;
+   }
 
-  .container {
-    background-color: #4fb391;
-  }
+   .sidebar {
+       flex: 0.25; /* Ajusta el ancho de la barra lateral para escritorio */
+   }
 
-  nav {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 200px;
-    top: 50px;
-    height: calc(100vh - 50px);
-    background: #2d6653;
-    transform: translateX(-100%);
-    transition: 0.4s ease;
-  }
-  .navigation li {
-    list-style: none;
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  }
+   .content {
+       flex: 0.75; /* Ajusta el ancho del contenido para escritorio */
+   }
 
-  .navigation a {
-    color: var(--main-color);
-    display: block;
-    line-height: 3.5;
-    padding: 0 10px;
-    text-decoration: none;
-    transition: 0.4s ease;
-  }
+   .productos {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr); /* Tres columnas en escritorio */
+       gap: 20px;
+   }
 
-  .navigation a:hover {
-    transform: translateX(10%);
-  }
+   .card {
+       height: 400px; /* Ajusta la altura de las tarjetas para escritorio */
+   }
+}
 
-  #btn-nav {
-    display: none;
-  }
+/* Estilos para dispositivos móviles (teléfonos) */
+@media (max-width: 767px) {
+   .navbar #logo {
+       font-size: 20px; /* Ajusta el tamaño del logo para teléfonos */
+   }
 
-  #btn-nav:checked ~ nav {
-    transform: translateX(0);
-  }
+   .menu ul li {
+       font-size: 16px; /* Ajusta el tamaño del texto del menú para teléfonos */
+   }
 
-  .btn-nav {
-    color: var(--main-color);
-    font-size: 30px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    cursor: pointer;
-    padding: 6.5px 15px;
-    transition: 0.2s ease;
-    background: rgba(0, 0, 0, 0.1);
-  }
+   .productos {
+       display: grid;
+       grid-template-columns: 1fr; /* Una columna en teléfonos */
+       gap: 20px;
+   }
 
-  .btn-nav:hover {
-    background: rgba(0, 0, 0, 0.3);
-  }
-} */
-/*Resoluicion escritorio
-@media ((width >=992px)) {
-  * {
-    margin: 0;
-    padding: 0;
-    font-size: 62, 5%;
-  }
-  label {
-    display: none;
-  }
-  input {
-    display: none;
-  }
-}*/
+   .card {
+       height: auto; /* Ajusta la altura de las tarjetas para teléfonos */
+   }
+
+   .card img {
+       max-width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+       height: auto;
+   }
+}

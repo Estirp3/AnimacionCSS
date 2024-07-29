@@ -269,3 +269,56 @@ img:hover {
         display: none;
     }
 }
+
+
+/* Estilos para dispositivos de escritorio */
+@media (min-width: 992px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        flex: 0.25; /* Ajusta el ancho de la barra lateral para escritorio */
+    }
+
+    .content {
+        flex: 0.75; /* Ajusta el ancho del contenido para escritorio */
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en escritorio */
+        gap: 20px;
+    }
+
+    .card {
+        height: 400px; /* Ajusta la altura de las tarjetas para escritorio */
+    }
+}
+
+/* Estilos para dispositivos móviles (teléfonos) */
+@media (max-width: 767px) {
+    .navbar #logo {
+        font-size: 20px; /* Ajusta el tamaño del logo para teléfonos */
+    }
+
+    .menu ul li {
+        font-size: 16px; /* Ajusta el tamaño del texto del menú para teléfonos */
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: 1fr; /* Una columna en teléfonos */
+        gap: 20px;
+    }
+
+    .card {
+        height: auto; /* Ajusta la altura de las tarjetas para teléfonos */
+    }
+
+    .card img {
+        max-width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+        height: auto;
+    }
+}
