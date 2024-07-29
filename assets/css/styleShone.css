@@ -296,29 +296,3 @@ img:hover {
         height: 400px; /* Ajusta la altura de las tarjetas para escritorio */
     }
 }
-
-/* Estilos para dispositivos móviles (teléfonos) */
-@media (max-width: 767px) {
-    .navbar #logo {
-        font-size: 20px; /* Ajusta el tamaño del logo para teléfonos */
-    }
-
-    .menu ul li {
-        font-size: 16px; /* Ajusta el tamaño del texto del menú para teléfonos */
-    }
-
-    .productos {
-        display: grid;
-        grid-template-columns: 1fr; /* Una columna en teléfonos */
-        gap: 20px;
-    }
-
-    .card {
-        height: auto; /* Ajusta la altura de las tarjetas para teléfonos */
-    }
-
-    .card img {
-        max-width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
-        height: auto;
-    }
-}

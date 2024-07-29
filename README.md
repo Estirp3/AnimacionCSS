@@ -7,5 +7,5 @@
 
 ## Demo
 
-[proceso](https://estirp3.github.io/AnimacionCSS/indext.html)
+[Despliegue](https://estirp3.github.io/AnimacionCSS/indext.html)
 
